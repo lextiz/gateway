@@ -142,7 +142,7 @@ type HeaderSettings struct {
 	// DisableXForwardedFor configures Envoy Proxy to stop appending the downstream address
 	// to the X-Forwarded-For header.
 	//
-	// This only disables the automatic append/add behavior. It does not remove or sanitize
+	// This only disables the automatic append behavior. It does not remove or sanitize
 	// an incoming X-Forwarded-For header.
 	// +optional
 	DisableXForwardedFor *bool `json:"disableXForwardedFor,omitempty"`

@@ -410,7 +410,7 @@ we set `numTrustedHops` to 2, so the client IP will be taken from the second rig
 
 To stop Envoy Gateway from automatically appending the downstream client address to `X-Forwarded-For`,
 set `spec.headers.disableXForwardedFor: true` in the same `ClientTrafficPolicy`.
-This only disables the automatic append/add behavior and does not remove or sanitize an incoming
+This only disables the automatic append behavior and does not remove or sanitize an incoming
 `X-Forwarded-For` header.
 
 ```yaml

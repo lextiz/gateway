@@ -315,6 +315,7 @@ xdsIR:
           numTrustedHops: 2
       headers:
         disableXForwardedFor: true
+        withUnderscoresAction: RejectRequest
       externalPort: 8081
       hostnames:
       - '*'
@@ -368,6 +369,7 @@ xdsIR:
       externalPort: 8084
       headers:
         disableXForwardedFor: true
+        withUnderscoresAction: RejectRequest
       hostnames:
       - '*'
       metadata:
