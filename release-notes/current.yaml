@@ -36,6 +36,7 @@ new features: |
   Added support for configuring statusOnError in ExtAuth settings
   Added support for retry budget in BackendTrafficPolicy.
   Added support for upstrean access log.
+  Added `spec.headers.disableXForwardedFor` to ClientTrafficPolicy to disable Envoy's automatic X-Forwarded-For append behavior for both the default HTTP connection manager path and XFF original IP detection.
 
 bug fixes: |
   Rejected ClientTrafficPolicy if invalid TLS cipher suites are configured.
