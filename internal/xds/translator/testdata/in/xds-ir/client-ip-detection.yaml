@@ -17,6 +17,8 @@ http:
   clientIPDetection:
     xForwardedFor:
       numTrustedHops: 2
+  headers:
+    disableXForwardedFor: true
 - name: "second-listener"
   address: "::"
   port: 8082
@@ -76,3 +78,21 @@ http:
       - "192.168.1.0/24"
       - "10.0.0.0/16"
       - "172.16.0.0/12"
+
+- name: "fifth-listener"
+  address: "::"
+  port: 8085
+  hostnames:
+  - "*"
+  headers:
+    disableXForwardedFor: true
+  routes:
+  - name: "fifth-route"
+    hostname: "*"
+    destination:
+      name: "fifth-route-dest"
+      settings:
+      - endpoints:
+        - host: "5.5.5.5"
+          port: 8085
+        name: "fifth-route-dest/backend/0"
