@@ -254,6 +254,8 @@ $ curl -vvv --header "Host: headers.example" "http://${GATEWAY_HOST}/get" --head
 
 Headers can be removed from a request by simply supplying a list of header names.
 
+Header names are case-insensitive, so each header only needs to be listed once (for example, `x-forwarded-for` also matches `X-Forwarded-For`).
+
 Setting headers is similar to adding headers. If the request does not have the header configured by the filter, then it
 will be added, but unlike [adding request headers](#adding-request-headers) which will append the value of the header if
 the request already contains it, setting a header will cause the value to be replaced by the value configured in the
